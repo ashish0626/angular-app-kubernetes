@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubernetangularui-3f93"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubernetangularui-3f93"
+  template:
+    metadata:
+      labels:
+        app: "kubernetangularui-3f93"
+    spec:
+      containers:
+        - name: "kubernetangularui-3f93"
+          image: "employeeregistrationserviceacr.azurecr.io/kubernetangularui"
+          ports:
+          - containerPort: 80
